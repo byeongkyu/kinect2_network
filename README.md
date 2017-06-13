@@ -1,4 +1,4 @@
-# Kinect2_network
+# OpenPTrack
 
 ## Maintainer
 
