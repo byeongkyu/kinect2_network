@@ -34,6 +34,8 @@ find_package(PCL REQUIRED)
 include_directories( ${PCL_INCLUDE_DIRS} )
 find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+find_package(Ceres REQUIRED)
+include_directories( ${CERES_INCLUDE_DIRS} )
 
 find_package(OpenMP REQUIRED)
 if(OPENMP_FOUND)
@@ -70,6 +72,7 @@ target_link_libraries(opt_calibration
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   ${OpenCV_LIBS}
+  ${CERES_LIBRARIES}
 )
 
 # Publish camera_info topic for stereo:
@@ -79,6 +82,7 @@ target_link_libraries(stereo_publisher
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   ${OpenCV_LIBS}
+  ${CERES_LIBRARIES}
 )
 
 add_executable(opt_calibration_refinement
@@ -87,6 +91,7 @@ add_executable(opt_calibration_refinement
 )
 target_link_libraries(opt_calibration_refinement
   ${catkin_LIBRARIES}
+  ${CERES_LIBRARIES}
 )
 
 add_executable(opt_define_reference_frame
@@ -100,4 +105,5 @@ target_link_libraries(opt_define_reference_frame
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
   ${OpenCV_LIBS}
+  ${CERES_LIBRARIES}
 )
