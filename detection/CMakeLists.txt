@@ -43,7 +43,7 @@ generate_dynamic_reconfigure_options(cfg/HaarDispAdaDetector.cfg cfg/GroundBased
 catkin_package(
     CATKIN_DEPENDS roscpp pcl_ros pcl_conversions opt_utils opt_msgs
     DEPENDS OpenCV
-    LIBRARIES ${PROJECT_NAME}
+    LIBRARIES ${PROJECT_NAME} opt_utils
     INCLUDE_DIRS include
 )
 

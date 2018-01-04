@@ -17,7 +17,7 @@ target_link_libraries(json ${catkin_LIBRARIES})
 
 catkin_package(
    INCLUDE_DIRS include
-   LIBRARIES ${PROJECT_NAME} json
+   LIBRARIES ${PROJECT_NAME}
    CATKIN_DEPENDS roscpp
 )
 
